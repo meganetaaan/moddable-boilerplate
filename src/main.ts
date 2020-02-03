@@ -1,4 +1,4 @@
 // Write some IoT
 
-const str: string = "Hello World";
-trace(str);
+const message = 'Hello Moddable'
+trace(message)
