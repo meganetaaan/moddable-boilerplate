@@ -1,6 +1,4 @@
-import { Content } from 'piu'
-
 // Write some IoT
+import {} from 'moddable/piu'
 
 const message = 'Hello Moddable'
-trace(message)
