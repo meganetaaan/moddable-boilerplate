@@ -1,0 +1,40 @@
+{
+  "name": "moddable-boilerplate",
+  "version": "0.0.0",
+  "description": "Yet another moddableSDK project boilerplate with typescript, eslint and prettier",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint:fix": "npm run lint --fix",
+    "clean": "rimraf ./build/*",
+    "build": "npm run clean && tsc && cp manifest.json build/",
+    "debug:linux": "npm run clean && tsc && cp -r assets manifest.json build/ && cd build && mcconfig -d -m -p lin",
+    "debug:m5stack": "npm run clean && tsc && cp -r assets manifest.json build/ && cd build && mcconfig -d -m -p esp32/m5stack",
+    "deploy:linux": "npm run clean && tsc && cp manifest.json build/ && cd build && mcconfig -d -m -p lin",
+    "deploy:m5stack": "npm run clean && tsc && cp manifest.json build/ && cd build && mcconfig -d -m -p esp32/m5stack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/meganetaaan/moddable-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meganetaaan/moddable-boilerplate/issues"
+  },
+  "homepage": "https://github.com/meganetaaan/moddable-boilerplate#readme",
+  "private": true,
+  "devDependencies": {
+    "@types/moddable": "git+https://github.com/meganetaaan/types-moddable#master",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^2.7.1",
+    "typescript": "^3.7.5"
+  }
+}
