@@ -1,0 +1,1 @@
+docker build ./docker/moddable-esp32 -t moddable-esp32
