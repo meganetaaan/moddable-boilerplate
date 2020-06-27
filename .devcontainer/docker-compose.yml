@@ -1,14 +1,12 @@
 version: '3'
 services:
   dev:
-    image: meganetaaan/moddable-esp32
+    image: meganetaaan/moddable-esp32-nodejs
     privileged: true
     network_mode: host
     volumes:
       - /dev:/dev
       - ../:/workspace:cached
-      - ../tmp:/root/Projects/moddable/build/tmp
-      - /workspace/tmp/
     environment:
       - DISPLAY
     command: /bin/sh -c "while sleep 1000; do :; done"
