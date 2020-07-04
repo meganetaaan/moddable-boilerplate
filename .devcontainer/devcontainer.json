@@ -8,5 +8,8 @@
 	"settings": { 
 		"terminal.integrated.shell.linux": null
 	},
-	"extensions": []
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint"
+	]
 }
